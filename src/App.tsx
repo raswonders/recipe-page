@@ -10,17 +10,23 @@ function App() {
           alt={recipe.title}
         />
       </header>
-      <div className="flex flex-col p-10 space-y-8">
-        <section className="flex flex-col">
-          <h1>{recipe.title}</h1>
+      <div className="flex flex-col p-10 space-y-8 text-base">
+        <section className="flex flex-col space-y-6">
+          <h1 className="font-youngSerif text-4xl leading-none font-normal">
+            {recipe.title}
+          </h1>
           <p>{recipe.description}</p>
-          <div className="">
+        </section>
+
+        <section>
+          <div className="flex flex-col space-y-4 p-6 text-xl font-semibold">
             <h3 className="">Preparation time</h3>
             <ul className="">
               {Object.entries(recipe.time).map(([key, value]) => {
                 return (
                   <li>
-                    <span className="">{key}</span>:{value}
+                    {key}
+                    <span className="font-normal">{`: ${value}`}</span>
                   </li>
                 );
               })}
