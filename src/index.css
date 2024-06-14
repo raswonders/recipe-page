@@ -4,14 +4,16 @@
 
 @font-face {
   font-family: "Outfit";
-  src: local("Outfit") url("/public/assets/fonts/Outfit-VariableFont_wght.ttf")
-    format("truetype");
+  src:
+    local("Outfit"),
+    url("/public/assets/fonts/Outfit-VariableFont_wght.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Young Serif";
-  src: local("Young Serif") url("/public/assets/fonts/YoungSerif-Regular.ttf")
-    format("truetype");
+  src:
+    local("Young Serif"),
+    url("/public/assets/fonts/YoungSerif-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 

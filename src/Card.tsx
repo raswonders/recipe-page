@@ -3,7 +3,7 @@ import recipe from "./data/SimpleOmelette.tsx";
 
 export function Card() {
   return (
-    <div className="sm:p-10 sm:space-y-10 max-w-[736px] bg-white sm:rounded-3xl sm:my-32">
+    <div className="sm:p-10 sm:space-y-10 max-w-[736px] bg-white sm:rounded-3xl sm:my-32 font-outfit">
       <header>
         <img
           src="../public/assets/images/image-omelette.jpeg"
