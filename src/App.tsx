@@ -17,21 +17,19 @@ function App() {
           </h1>
           <p>{recipe.description}</p>
         </section>
-
-        <section className="flex flex-col gap-4 p-6 bg-snow text-xl font-semibold rounded-xl">
-          <h3 className="text-darkRaspberry">Preparation time</h3>
-          <ul className="space-y-2">
+        <section className="flex flex-col gap-4 p-6 bg-snow font-semibold rounded-xl">
+          <h3 className="text-darkRaspberry text-xl">Preparation time</h3>
+          <ul className="space-y-2 ml-2">
             {Object.entries(recipe.time).map(([key, value]) => {
               return (
                 <li>
-                  {key}
+                  {key.charAt(0).toUpperCase() + key.slice(1)}
                   <span className="font-normal">{`: ${value}`}</span>
                 </li>
               );
             })}
           </ul>
         </section>
-
         <section className="flex flex-col gap-6">
           <h2 className="text-brandyRed text-[28px] leading-none">
             Ingredients
@@ -42,9 +40,7 @@ function App() {
             })}
           </ul>
         </section>
-
         <Line />
-
         <section className="flex flex-col gap-6">
           <h2 className="text-brandyRed text-[28px] leading-none">
             Instructions
@@ -63,9 +59,7 @@ function App() {
             })}
           </ol>
         </section>
-
         <Line />
-
         <section className="flex flex-col gap-6">
           <h2 className="text-brandyRed text-[28px] leading-none">Nutrition</h2>
           <p className="">{recipe.nutrition.description}</p>
@@ -75,7 +69,9 @@ function App() {
                 <>
                   <div className="flex px-8">
                     <div className="basis-1/2">{key}</div>
-                    <div className="basis-1/2 font-semibold text-brandyRed">{value}</div>
+                    <div className="basis-1/2 font-semibold text-brandyRed">
+                      {value}
+                    </div>
                   </div>
                   <Line />
                 </>
