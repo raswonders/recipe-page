@@ -14,3 +14,11 @@
     format("truetype");
   font-weight: 400;
 }
+
+ul li {
+  margin-left: 8px; 
+  padding-left: 32px;
+  background-image: url("/public/assets/images/ellipse-1.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
