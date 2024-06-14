@@ -20,7 +20,7 @@ function App() {
 
         <section className="flex flex-col gap-4 p-6 bg-snow text-xl font-semibold rounded-xl">
           <h3 className="text-darkRaspberry">Preparation time</h3>
-          <ul className="">
+          <ul className="space-y-2">
             {Object.entries(recipe.time).map(([key, value]) => {
               return (
                 <li>
@@ -32,9 +32,11 @@ function App() {
           </ul>
         </section>
 
-        <section>
-          <h2 className="">Ingredients</h2>
-          <ul>
+        <section className="flex flex-col gap-6">
+          <h2 className="text-brandyRed text-[28px] leading-none">
+            Ingredients
+          </h2>
+          <ul className="space-y-2">
             {recipe.ingredients.map((item) => {
               return <li>{item}</li>;
             })}
