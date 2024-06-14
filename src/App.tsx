@@ -66,19 +66,22 @@ function App() {
 
         <Line />
 
-        <section className="">
-          <h2 className="">Nutrition</h2>
+        <section className="flex flex-col gap-6">
+          <h2 className="text-brandyRed text-[28px] leading-none">Nutrition</h2>
           <p className="">{recipe.nutrition.description}</p>
-          <ul className="">
+          <div className="space-y-3">
             {recipe.nutrition.items.map(([key, value]) => {
               return (
-                <li className="flex justify-between">
-                  <div>{key}</div>
-                  <div>{value}</div>
-                </li>
+                <>
+                  <div className="flex px-8">
+                    <div className="basis-1/2">{key}</div>
+                    <div className="basis-1/2 font-semibold text-brandyRed">{value}</div>
+                  </div>
+                  <Line />
+                </>
               );
             })}
-          </ul>
+          </div>
         </section>
       </div>
     </>
