@@ -1,11 +1,11 @@
-export const SimpleOmelette = {
+const recipe = {
   title: "Simple Omelette Recipe",
   description:
     "An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.",
   time: {
     total: "Approximately 10 minutes",
     preparation: "5 minutes",
-    Cooking: "5 minutes",
+    cooking: "5 minutes",
   },
   ingredients: [
     "2-3 large eggs",
@@ -33,3 +33,5 @@ export const SimpleOmelette = {
     ],
   },
 };
+
+export default recipe;
