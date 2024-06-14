@@ -36,7 +36,7 @@ function App() {
           <h2 className="text-brandyRed text-[28px] leading-none">
             Ingredients
           </h2>
-          <ul className="space-y-2">
+          <ul className="space-y-2 ml-2">
             {recipe.ingredients.map((item) => {
               return <li>{item}</li>;
             })}
@@ -45,11 +45,21 @@ function App() {
 
         <Line />
 
-        <section>
-          <h2 className="">Instructions</h2>
-          <ol className="">
+        <section className="flex flex-col gap-6">
+          <h2 className="text-brandyRed text-[28px] leading-none">
+            Instructions
+          </h2>
+          <ol className="list-decimal ml-5 space-y-2 font-semibold">
             {recipe.instructions.map((item) => {
-              return <li>{item}</li>;
+              const [key, value] = item.split(":");
+              return (
+                <li className="text-brandyRed">
+                  <span className="text-black">
+                    {key}
+                    <span className="font-normal">{`: ${value}`}</span>
+                  </span>
+                </li>
+              );
             })}
           </ol>
         </section>
