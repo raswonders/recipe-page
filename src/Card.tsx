@@ -23,7 +23,7 @@ export function Card() {
           <ul className="space-y-2 ml-2">
             {Object.entries(recipe.time).map(([key, value]) => {
               return (
-                <li>
+                <li key={key}>
                   {key.charAt(0).toUpperCase() + key.slice(1)}
                   <span className="font-normal">{`: ${value}`}</span>
                 </li>
@@ -37,7 +37,7 @@ export function Card() {
           </h2>
           <ul className="space-y-2 ml-2">
             {recipe.ingredients.map((item) => {
-              return <li>{item}</li>;
+              return <li key={item}>{item}</li>;
             })}
           </ul>
         </section>
@@ -50,7 +50,7 @@ export function Card() {
             {recipe.instructions.map((item) => {
               const [key, value] = item.split(":");
               return (
-                <li className="text-brandyRed">
+                <li key={key} className="text-brandyRed">
                   <span className="text-black">
                     {key}
                     <span className="font-normal">{`: ${value}`}</span>
@@ -62,12 +62,14 @@ export function Card() {
         </section>
         <Line />
         <section className="flex flex-col gap-6">
-          <h2 className="text-brandyRed text-[28px] leading-none font-youngSerif">Nutrition</h2>
+          <h2 className="text-brandyRed text-[28px] leading-none font-youngSerif">
+            Nutrition
+          </h2>
           <p className="">{recipe.nutrition.description}</p>
           <div className="space-y-3">
             {recipe.nutrition.items.map(([key, value]) => {
               return (
-                <>
+                <div key={key}>
                   <div className="flex px-8">
                     <div className="basis-1/2">{key}</div>
                     <div className="basis-1/2 font-semibold text-brandyRed">
@@ -75,7 +77,7 @@ export function Card() {
                     </div>
                   </div>
                   <Line />
-                </>
+                </div>
               );
             })}
           </div>
