@@ -32,7 +32,7 @@ export function Card() {
           </ul>
         </section>
         <section className="flex flex-col gap-6">
-          <h2 className="text-brandyRed text-[28px] leading-none">
+          <h2 className="text-brandyRed text-[28px] leading-none font-youngSerif">
             Ingredients
           </h2>
           <ul className="space-y-2 ml-2">
@@ -43,7 +43,7 @@ export function Card() {
         </section>
         <Line />
         <section className="flex flex-col gap-6">
-          <h2 className="text-brandyRed text-[28px] leading-none">
+          <h2 className="text-brandyRed text-[28px] leading-none font-youngSerif">
             Instructions
           </h2>
           <ol className="list-decimal ml-5 space-y-2 font-semibold">
@@ -62,7 +62,7 @@ export function Card() {
         </section>
         <Line />
         <section className="flex flex-col gap-6">
-          <h2 className="text-brandyRed text-[28px] leading-none">Nutrition</h2>
+          <h2 className="text-brandyRed text-[28px] leading-none font-youngSerif">Nutrition</h2>
           <p className="">{recipe.nutrition.description}</p>
           <div className="space-y-3">
             {recipe.nutrition.items.map(([key, value]) => {
