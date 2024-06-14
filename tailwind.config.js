@@ -15,6 +15,7 @@ export default {
         wengeBrown: "hsla(30, 11%, 34%, 1)",
         white: "hsla(0, 0%, 100%, 1)",
         whiteCoffee: "hsla(30, 18%, 87%, 1)",
+        eggshell: "hsla(30, 54%, 90%, 1)",
       },
     },
   },
