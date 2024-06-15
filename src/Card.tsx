@@ -3,6 +3,7 @@ import { RecipeTimetable } from "./RecipePreparation.tsx";
 import { Line } from "./Line.tsx";
 import recipe from "./data/SimpleOmelette.tsx";
 import omeletteImage from "/public/assets/images/image-omelette.jpeg";
+import { RecipeIntro } from "./RecipeIntro.tsx";
 
 export function Card() {
   return (
@@ -11,12 +12,7 @@ export function Card() {
         <img src={omeletteImage} className="sm:rounded-xl" alt={recipe.title} />
       </header>
       <div className="flex flex-col p-10 sm:p-0 gap-8 text-base">
-        <section className="flex flex-col gap-6">
-          <h1 className="font-youngSerif text-4xl leading-none font-normal">
-            {recipe.title}
-          </h1>
-          <p>{recipe.description}</p>
-        </section>
+        <RecipeIntro title={recipe.title} description={recipe.description} />
         <RecipeTimetable>
           {Object.entries(recipe.time).map(([key, value]) => {
             return (
@@ -27,7 +23,6 @@ export function Card() {
             );
           })}
         </RecipeTimetable>
-
         <RecipeSection title="Ingredients">
           <ul className="space-y-2 ml-2">
             {recipe.ingredients.map((item) => {
