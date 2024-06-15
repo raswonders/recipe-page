@@ -1,4 +1,5 @@
 import { CardSection } from "./CardSection.tsx";
+import { RecipeTimetable } from "./RecipePreparation.tsx";
 import { Line } from "./Line.tsx";
 import recipe from "./data/SimpleOmelette.tsx";
 import omeletteImage from "/public/assets/images/image-omelette.jpeg";
@@ -16,19 +17,17 @@ export function Card() {
           </h1>
           <p>{recipe.description}</p>
         </section>
-        <section className="flex flex-col gap-4 p-6 bg-snow font-semibold rounded-xl">
-          <h3 className="text-darkRaspberry text-xl">Preparation time</h3>
-          <ul className="space-y-2 ml-2">
-            {Object.entries(recipe.time).map(([key, value]) => {
-              return (
-                <li key={key}>
-                  {key.charAt(0).toUpperCase() + key.slice(1)}
-                  <span className="font-normal">{`: ${value}`}</span>
-                </li>
-              );
-            })}
-          </ul>
-        </section>
+        <RecipeTimetable>
+          {Object.entries(recipe.time).map(([key, value]) => {
+            return (
+              <li key={key}>
+                {key.charAt(0).toUpperCase() + key.slice(1)}
+                <span className="font-normal">{`: ${value}`}</span>
+              </li>
+            );
+          })}
+        </RecipeTimetable>
+
         <CardSection title="Ingredients">
           <ul className="space-y-2 ml-2">
             {recipe.ingredients.map((item) => {
