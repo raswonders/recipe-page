@@ -1,4 +1,4 @@
-# Frontend Mentor - Recipe page challenge 
+# Frontend Mentor - Recipe page challenge
 
 This is a solution to the [Recipe page challenge](https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm).
 
@@ -12,9 +12,7 @@ This is a solution to the [Recipe page challenge](https://www.frontendmentor.io/
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -22,56 +20,41 @@ This is a solution to the [Recipe page challenge](https://www.frontendmentor.io/
 
 build out this recipe page and get it looking as close to the design as possible.
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
 ### Screenshot
 
-![](./screenshot.)
+![](./screenshot.png)
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://flourishing-pegasus-8d04a8.netlify.app/)
+- Live Site URL: [on netlify](https://sunny-moonbeam-286882.netlify.app/)
 
 ## My process
+
+I was working on making structure of my code little better than previously. First I created some sort of generic Card looking component. It didn't feel right and in the end I changed it to more content aware Recipe. It helps, when I pick a some context for the components I'm building. This time I decided to crete a reusable Recipe, which could be used on some sort of of recipe website.
 
 ### Built with
 
 - Mobile-first workflow
+- [TS](https://www.typescriptlang.org/) - Typescript
 - [React](https://reactjs.org/) - JS library
 - [Tailwindcss](https://tailwindcss.com/) - For styles
 
 ### What I learned
 
-FIXME Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I learned how to use typeof operator in TS. It came very handy when I needed type for my structured data. Instead of defining it by hand as usually, I simply inferred type like this
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
+```ts
+export type RecipeData = typeof recipe;
 ```
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
+Also learned the hard way, that in vite, absolute urls in image source are resolved with origin starting in /public not root of my project as I thought previously.
 
 ### Continued development
 
-FIXME Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Will continue experimenting with structure of components and try to use typeof in more places.
 
 ## Author
 
 - Frontend Mentor - [@raswonders](https://www.frontendmentor.io/profile/raswonders)
 - Twitter - [@raswonders](https://www.twitter.com/raswonders)
 - LinkedIn - [Rastislav Hepner](https://www.linkedin.com/in/rastislavhepner/)
-
-## Acknowledgments
-
-FIXME This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
