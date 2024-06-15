@@ -1,4 +1,4 @@
-import { CardSection } from "./CardSection.tsx";
+import { RecipeSection } from "./RecipeSection.tsx";
 import { RecipeTimetable } from "./RecipePreparation.tsx";
 import { Line } from "./Line.tsx";
 import recipe from "./data/SimpleOmelette.tsx";
@@ -28,15 +28,15 @@ export function Card() {
           })}
         </RecipeTimetable>
 
-        <CardSection title="Ingredients">
+        <RecipeSection title="Ingredients">
           <ul className="space-y-2 ml-2">
             {recipe.ingredients.map((item) => {
               return <li key={item}>{item}</li>;
             })}
           </ul>
-        </CardSection>
+        </RecipeSection>
         <Line />
-        <CardSection title="Instructions">
+        <RecipeSection title="Instructions">
           <ol className="list-decimal ml-5 space-y-2 font-semibold">
             {recipe.instructions.map((item) => {
               const [key, value] = item.split(":");
@@ -50,9 +50,9 @@ export function Card() {
               );
             })}
           </ol>
-        </CardSection>
+        </RecipeSection>
         <Line />
-        <CardSection title="Nutrition">
+        <RecipeSection title="Nutrition">
           <p className="">{recipe.nutrition.description}</p>
           <div className="space-y-3">
             {recipe.nutrition.items.map(([key, value]) => {
@@ -69,7 +69,7 @@ export function Card() {
               );
             })}
           </div>
-        </CardSection>
+        </RecipeSection>
       </div>
     </div>
   );

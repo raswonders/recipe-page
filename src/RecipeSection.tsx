@@ -5,7 +5,7 @@ type CardSectionProps = {
   children: ReactNode;
 };
 
-export function CardSection({ title, children }: CardSectionProps) {
+export function RecipeSection({ title, children }: CardSectionProps) {
   return (
     <section className="flex flex-col gap-6">
       <h2 className="text-brandyRed text-[28px] leading-none font-youngSerif">
