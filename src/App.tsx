@@ -1,9 +1,9 @@
-import { Card } from "./Card.tsx";
+import { Recipe } from "./Recipe.tsx";
 
 function App() {
   return (
     <main className="flex justify-center items-center bg-eggshell">
-      <Card />
+      <Recipe />
     </main>
   );
 }
