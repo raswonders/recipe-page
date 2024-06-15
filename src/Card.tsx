@@ -1,18 +1,15 @@
 import { Line } from "./Line.tsx";
 import recipe from "./data/SimpleOmelette.tsx";
+import omeletteImage from "/public/assets/images/image-omelette.jpeg";
 
 export function Card() {
   return (
     <div className="sm:p-10 sm:space-y-10 max-w-[736px] bg-white sm:rounded-3xl sm:my-32 font-outfit">
       <header>
-        <img
-          src="../public/assets/images/image-omelette.jpeg"
-          className="sm:rounded-xl"
-          alt={recipe.title}
-        />
+        <img src={omeletteImage} className="sm:rounded-xl" alt={recipe.title} />
       </header>
       <div className="flex flex-col p-10 sm:p-0 gap-8 text-base">
-        <section className="flex flex-col space-y-6">
+        <section className="flex flex-col gap-6">
           <h1 className="font-youngSerif text-4xl leading-none font-normal">
             {recipe.title}
           </h1>
