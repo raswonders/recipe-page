@@ -1,3 +1,4 @@
+import { CardSection } from "./CardSection.tsx";
 import { Line } from "./Line.tsx";
 import recipe from "./data/SimpleOmelette.tsx";
 import omeletteImage from "/public/assets/images/image-omelette.jpeg";
@@ -28,21 +29,15 @@ export function Card() {
             })}
           </ul>
         </section>
-        <section className="flex flex-col gap-6">
-          <h2 className="text-brandyRed text-[28px] leading-none font-youngSerif">
-            Ingredients
-          </h2>
+        <CardSection title="Ingredients">
           <ul className="space-y-2 ml-2">
             {recipe.ingredients.map((item) => {
               return <li key={item}>{item}</li>;
             })}
           </ul>
-        </section>
+        </CardSection>
         <Line />
-        <section className="flex flex-col gap-6">
-          <h2 className="text-brandyRed text-[28px] leading-none font-youngSerif">
-            Instructions
-          </h2>
+        <CardSection title="Instructions">
           <ol className="list-decimal ml-5 space-y-2 font-semibold">
             {recipe.instructions.map((item) => {
               const [key, value] = item.split(":");
@@ -56,12 +51,9 @@ export function Card() {
               );
             })}
           </ol>
-        </section>
+        </CardSection>
         <Line />
-        <section className="flex flex-col gap-6">
-          <h2 className="text-brandyRed text-[28px] leading-none font-youngSerif">
-            Nutrition
-          </h2>
+        <CardSection title="Nutrition">
           <p className="">{recipe.nutrition.description}</p>
           <div className="space-y-3">
             {recipe.nutrition.items.map(([key, value]) => {
@@ -78,7 +70,7 @@ export function Card() {
               );
             })}
           </div>
-        </section>
+        </CardSection>
       </div>
     </div>
   );
